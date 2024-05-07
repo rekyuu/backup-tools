@@ -1,6 +1,7 @@
 #! /bin/bash
 
 export PGHOST
+export PGPORT
 export PGUSER
 export PGPASSWORD
 
