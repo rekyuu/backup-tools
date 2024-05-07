@@ -25,3 +25,5 @@ aws s3 mv "${backup_filepath}" "${s3_destination}" --only-show-errors
 
 echo "Cleaning up"
 rm "${backup_filepath}" 2> /dev/null
+
+exit 0

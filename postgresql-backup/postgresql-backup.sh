@@ -34,3 +34,5 @@ for DATABASE in $DATABASES; do
     rm "${backup_filepath}" 2> /dev/null
     rm "${backup_filepath}.gz" 2> /dev/null
 done
+
+exit 0
