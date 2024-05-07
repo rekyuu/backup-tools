@@ -1,0 +1,16 @@
+name: Deploy
+
+on:
+  push:
+    tags: [ "*" ]
+
+jobs:
+  deploy-directory-backup:
+    uses: ./.github/workflows/docker-build-and-push.yml
+    with:
+      image_name: directory-backup
+
+  deploy-postgresql-backup:
+    uses: ./.github/workflows/docker-build-and-push.yml
+    with:
+      image_name: postgresql-backup
