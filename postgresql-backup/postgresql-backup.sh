@@ -14,7 +14,7 @@ function get_backup_filename {
 }
 
 DATABASES=$(psql --quiet --no-align --tuples-only --command="SELECT datname FROM pg_database" | \
-    grep -E -v "template0|template1|postgres")
+    grep -E -v "template0|template1|postgres|${PGUSER}")
 
 for DATABASE in $DATABASES; do
     backup_filename="$(get_backup_filename "${DATABASE}").dump"
